@@ -2,8 +2,9 @@ from django.contrib import admin
 
 from .models import University
 from .models import Department
+from .models import CourseMaterial
 from .models import Course
-from .models import Student
+from .models import VideoURL
 from .models import Book
 
 class UniversityAdmin(admin.ModelAdmin):
@@ -15,8 +16,11 @@ class DepartmentAdmin(admin.ModelAdmin):
 class CourseAdmin(admin.ModelAdmin):
     model = Course
 
-class StudentAdmin(admin.ModelAdmin):
-    model = Student
+class CourseMaterialAdmin(admin.ModelAdmin):
+    model = CourseMaterial
+
+class VideoURLAdmin(admin.ModelAdmin):
+    model = VideoURL
 
 class BookAdmin(admin.ModelAdmin):
     model = Book
@@ -25,5 +29,6 @@ class BookAdmin(admin.ModelAdmin):
 admin.site.register(University, UniversityAdmin)
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(Course, CourseAdmin)
-admin.site.register(Student, StudentAdmin)
+admin.site.register(CourseMaterial, CourseMaterialAdmin)
+admin.site.register(VideoURL, VideoURLAdmin)
 admin.site.register(Book, BookAdmin)

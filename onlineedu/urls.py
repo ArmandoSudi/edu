@@ -8,7 +8,8 @@ urlpatterns = [
     url(r'^universities/$', views.UniversityList.as_view(), name='university-list'),
     url(r'^departments/$', views.DepartmentList.as_view(), name='department-list'),
     url(r'^courses/$', views.CourseList.as_view(), name='course-list'),
-    url(r'^students/$', views.StudentList.as_view(), name='student-list'),
+    url(r'^coursematerials/$', views.CourseMaterialList.as_view(), name='coursematerial-list'),
+    url(r'^videourls/$', views.VideoURLList.as_view(), name='videourl-list'),
     url(r'^books/$', views.BookList.as_view(), name='book-list'),
 ]
 
