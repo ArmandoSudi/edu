@@ -12,7 +12,15 @@ class UniversityList(generics.ListCreateAPIView):
     queryset = University.objects.all()
     serializer_class = UniversitySerializer
 
+class UniversityDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = University.objects.all()
+    serializer_class = UniversitySerializer
+
 class DepartmentList(generics.ListCreateAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+class DepartmentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Department.objects.all()
     serializer_class = DepartmentSerializer
 
@@ -20,7 +28,15 @@ class CourseList(generics.ListCreateAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 
+class CourseDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+
 class CourseMaterialList(generics.ListCreateAPIView):
+    queryset = CourseMaterial.objects.all()
+    serializer_class = CourseMaterialSerializer
+
+class CourseMaterialDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CourseMaterial.objects.all()
     serializer_class = CourseMaterialSerializer
 
@@ -28,6 +44,14 @@ class VideoURLList(generics.ListCreateAPIView):
     queryset = VideoURL.objects.all()
     serializer_class = BookSerializer
 
+class VideoURLDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = VideoURL.objects.all()
+    serializer_class = BookSerializer
+
 class BookList(generics.ListCreateAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+
+class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
