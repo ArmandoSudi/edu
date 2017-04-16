@@ -8,6 +8,18 @@ from onlineedu.serializers import UniversitySerializer, DepartmentSerializer
 from onlineedu.serializers import CourseSerializer, CourseMaterialSerializer
 from onlineedu.serializers import BookSerializer, VideoURLSerializer
 
+from django.http import HttpResponse
+from django.template import loader
+from django.shortcuts import get_object_or_404
+
+def index(request, university_id):
+    university = get_object_or_404(University, pk=university_id)
+    template = loader.get_template('onlineedu/index.html')
+    context = {
+        'university' : university,
+    }
+    return HttpResponse(template.render(context, request))
+    
 class UniversityList(generics.ListCreateAPIView):
     queryset = University.objects.all()
     serializer_class = UniversitySerializer

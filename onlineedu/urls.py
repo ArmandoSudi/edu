@@ -5,6 +5,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from onlineedu import views
 
 urlpatterns = [
+    url(r'^(?P<university_id>[0-9]+)/$', views.index, name="index"),
     url(r'^universities/$', views.UniversityList.as_view(), name='university-list'),
     url(r'^universities/(?P<pk>[0-9]+)/$', views.UniversityDetail.as_view(), name='university-detail'),
     url(r'^departments/$', views.DepartmentList.as_view(), name='department-list'),

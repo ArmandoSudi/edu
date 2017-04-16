@@ -1,0 +1,6 @@
+{% if university %}
+    <h1>Welcome to {{ university.name }} </h1>
+    <p>Find us at this address {{ university.town }} !</p>
+{% else %}
+    <p>No university available </p>
+{% endif %}
